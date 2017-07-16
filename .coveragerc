@@ -1,0 +1,16 @@
+[paths]
+source =
+   src/specsynthase
+   */site-packages/specsynthase
+
+[run]
+branch = true
+source =
+    specsynthase
+    tests
+parallel = true
+
+[report]
+show_missing = true
+precision = 2
+omit = *migrations*
