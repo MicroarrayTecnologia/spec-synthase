@@ -1,0 +1,5 @@
+flake8
+pyyaml
+pytest
+pytest-travis-fold
+pytest-cov

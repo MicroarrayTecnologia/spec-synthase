@@ -1,6 +1,5 @@
-
-from specsynthase.cli import main
+from specsynthase.specbuilder import SpecBuilder
 
 
 def test_main():
-    assert main([]) == 0
+    SpecBuilder()
