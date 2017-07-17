@@ -23,7 +23,7 @@ install:
 script:
   - tox -v
 after_success:
-  - coveralls src
+  - coveralls
 after_failure:
   - more .tox/log/* | cat
   - more .tox/*/log/* | cat
