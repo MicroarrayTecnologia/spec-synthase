@@ -50,3 +50,8 @@ class SpecBuilder(OrderedDict):
         self._merge_part(self._parameters_key, parameters)
 
         return self
+
+    def dump(self, *args, **kwargs):
+        # We need to convert to a regular dict before dumping because the yaml
+        # module treats OrderedDicts as objects, not dictionaries.
+        return yaml.dump(dict(self), *args, **kwargs)

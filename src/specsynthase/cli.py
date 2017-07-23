@@ -9,4 +9,4 @@ def main():
     spec = SpecBuilder()
     for f in sys.argv[1:]:
         spec.add_spec(f)
-    print(yaml.dump(spec))
+    print(spec.dump(allow_unicode=True))
