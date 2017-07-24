@@ -1,0 +1,64 @@
+definitions:
+  ApiResponse:
+    properties:
+      code: {format: int32, type: integer}
+      message: {type: string}
+      type: {type: string}
+    type: object
+  Category:
+    properties:
+      id: {format: int64, type: integer}
+      name: {type: string}
+    type: object
+    xml: {name: Category}
+  Order:
+    properties:
+      complete: {default: false, type: boolean}
+      id: {format: int64, type: integer}
+      petId: {format: int64, type: integer}
+      quantity: {format: int32, type: integer}
+      shipDate: {format: date-time, type: string}
+      status:
+        description: Order Status
+        enum: [placed, approved, delivered]
+        type: string
+    type: object
+    xml: {name: Order}
+  Pet:
+    properties:
+      category: {$ref: '#/definitions/Category'}
+      id: {format: int64, type: integer}
+      name: {example: doggie, type: string}
+      photoUrls:
+        items: {type: string}
+        type: array
+        xml: {name: photoUrl, wrapped: true}
+      status:
+        description: pet status in the store
+        enum: [available, pending, sold]
+        type: string
+      tags:
+        items: {$ref: '#/definitions/Tag'}
+        type: array
+        xml: {name: tag, wrapped: true}
+    required: [name, photoUrls]
+    type: object
+    xml: {name: Pet}
+  Tag:
+    properties:
+      id: {format: int64, type: integer}
+      name: {type: string}
+    type: object
+    xml: {name: Tag}
+  User:
+    properties:
+      email: {type: string}
+      firstName: {type: string}
+      id: {format: int64, type: integer}
+      lastName: {type: string}
+      password: {type: string}
+      phone: {type: string}
+      userStatus: {description: User Status, format: int32, type: integer}
+      username: {type: string}
+    type: object
+    xml: {name: User}
