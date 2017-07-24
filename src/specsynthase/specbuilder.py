@@ -52,6 +52,4 @@ class SpecBuilder(OrderedDict):
         return self
 
     def dump(self, *args, **kwargs):
-        # We need to convert to a regular dict before dumping because the yaml
-        # module treats OrderedDicts as objects, not dictionaries.
-        return yaml.dump(dict(self), *args, **kwargs)
+        return yaml.safe_dump(*args, **kwargs)
