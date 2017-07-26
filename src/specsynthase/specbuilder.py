@@ -52,4 +52,4 @@ class SpecBuilder(OrderedDict):
         return self
 
     def dump(self, *args, **kwargs):
-        return yaml.safe_dump(*args, **kwargs)
+        return yaml.safe_dump(dict(**self), *args, **kwargs)

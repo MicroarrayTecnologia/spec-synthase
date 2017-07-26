@@ -18,4 +18,6 @@ def test_dump():
     for p in parts:
         spec.add_spec(path.join(base_dir, p))
 
-    assert full == spec
+    # Dumping and reloading the yaml is slow, but we can't compare dumped
+    # strings because of potential key ordering differences.
+    assert full == yaml.load(spec.dump())
