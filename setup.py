@@ -61,6 +61,11 @@ setup(
         # 'Programming Language :: Python :: Implementation :: Stackless',
         'Topic :: Utilities',
     ],
+    entry_points={
+        "console_scripts": {
+            "specsynthase = specsynthase.cli:main",
+        },
+    },
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],

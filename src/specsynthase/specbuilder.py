@@ -50,3 +50,6 @@ class SpecBuilder(OrderedDict):
         self._merge_part(self._parameters_key, parameters)
 
         return self
+
+    def dump(self, *args, **kwargs):
+        return yaml.safe_dump(dict(**self), *args, **kwargs)
