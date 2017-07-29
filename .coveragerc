@@ -4,9 +4,11 @@ source =
    */site-packages/specsynthase
 
 [run]
+omit = src/specsynthase/cli.py
 branch = true
 source =
     specsynthase
 
 [report]
+omit = src/specsynthase/cli.py
 show_missing = true
