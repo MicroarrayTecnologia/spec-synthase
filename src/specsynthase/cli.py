@@ -8,4 +8,4 @@ def main():
     spec = SpecBuilder()
     for f in sys.argv[1:]:
         spec.add_spec(f)
-    print(spec.dump(allow_unicode=True))
+    print(spec.validate().dump(allow_unicode=True))

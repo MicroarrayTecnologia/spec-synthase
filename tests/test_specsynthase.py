@@ -2,6 +2,8 @@ import pytest
 import yaml
 from os import path
 
+from swagger_spec_validator import SwaggerValidationError
+
 from specsynthase.specbuilder import SpecBuilder
 
 
@@ -47,3 +49,9 @@ def test_dump():
     # Dumping and reloading the yaml is slow, but we can't compare dumped
     # strings because of potential key ordering differences.
     assert full == yaml.load(spec.dump())
+
+
+def test_validation_fail():
+    base_dir = _get_base_dir()
+    with pytest.raises(SwaggerValidationError):
+        SpecBuilder().add_spec(path.join(base_dir, "base.yml")).validate()

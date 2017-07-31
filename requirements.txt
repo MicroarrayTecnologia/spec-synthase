@@ -3,3 +3,4 @@ pyyaml
 pytest
 pytest-cov
 coveralls
+swagger-spec-validator
