@@ -1,9 +1,8 @@
 import pytest
 import yaml
+
 from os import path
-
 from swagger_spec_validator import SwaggerValidationError
-
 from specsynthase.specbuilder import SpecBuilder
 
 
