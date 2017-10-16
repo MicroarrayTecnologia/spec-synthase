@@ -1,5 +1,6 @@
 import yaml
 from collections import OrderedDict
+from swagger_spec_validator.validator20 import validate_spec
 
 
 class SpecBuilder(OrderedDict):
@@ -49,3 +50,7 @@ class SpecBuilder(OrderedDict):
 
     def dump(self, *args, **kwargs):
         return yaml.safe_dump(dict(**self), *args, **kwargs)
+
+    def validate(self):
+        validate_spec(self)
+        return self

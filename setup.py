@@ -67,10 +67,11 @@ setup(
         },
     },
     keywords=[
-        # eg: 'keyword1', 'keyword2', 'keyword3',
+        'OpenAPI Specification', 'OAS', 'swagger', 'yaml', 'spec', 'api'
     ],
     install_requires=[
-        # eg: 'aspectlib==1.1.1', 'six>=1.7',
+        'pyyaml>=3.12',
+        'swagger-spec-validator>=2.1.0'
     ],
     extras_require={
         # eg:
