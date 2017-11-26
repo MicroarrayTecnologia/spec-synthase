@@ -9,7 +9,7 @@ class SpecBuilder(OrderedDict):
         self._mergeable_keys = ["definitions", "parameters", "paths", "responses", "securityDefinitions"]
 
     def _load_spec(self, file_name):
-        with file(file_name, 'r') as spec_file:
+        with open(file_name, 'r') as spec_file:
             return yaml.load(spec_file)
 
     def _merge_part(self, key, part_dict):

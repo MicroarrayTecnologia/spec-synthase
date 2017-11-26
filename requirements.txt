@@ -1,6 +1,3 @@
-flake8
-pyyaml
-pytest
-pytest-cov
-coveralls
-swagger-spec-validator
+flake8>=3.5.0
+pyyaml>=3.12
+swagger-spec-validator>=2.1.0
