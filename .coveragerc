@@ -1,12 +1,6 @@
-[paths]
-source =
-   src/specsynthase
-   */site-packages/specsynthase
-
 [run]
-branch = true
-source =
-    specsynthase
+branch = True
+include = specsynthase/*
 
 [report]
-show_missing = true
+show_missing = True
