@@ -54,7 +54,7 @@ Overview
 spec-synthase is a tool to help deal with big swagger files, by building the swagger specification files from little
 spec files.
 
-* Free software: BSD license
+* Free software: MPL2 license
 
 Installation
 ============
