@@ -21,13 +21,14 @@ def read(*names, **kwargs):
 def get_requirements(req_file):
     reqs = []
     with open(join(dirname(__file__), req_file),'r') as f:
-        reqs.append(f.readline().rstrip())
+        for line in f:
+            reqs.append(line.rstrip())
     return reqs
 
 
 setup(
     name='spec-synthase',
-    version='0.1.0',
+    version='0.1.4',
     license='MPL2',
     description='spec-synthase is a tool to help deal with big swagger files, by building the swagger specification files from little spec files. ',
     long_description=read('README.rst'),
@@ -38,18 +39,12 @@ setup(
     include_package_data=True,
     zip_safe=False,
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License','Operating System :: Unix',
-        'Operating System :: POSIX',
-        'Operating System :: Microsoft :: Windows',
+        'License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy'
-        'Topic :: Utilities',
     ],
     entry_points={
         "console_scripts": {
