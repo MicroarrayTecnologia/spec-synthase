@@ -1,9 +1,9 @@
-spec-synthase
+Spec-Synthase
 =============
 
 |Build Status| |Coverage Status|
 
-spec-synthase is a tool to help deal with big swagger files, by building
+Spec-Synthase is a tool to help deal with big swagger files, by building
 the swagger specification file from little yaml files.
 
 **Documentation:** http://spec-synthase.readthedocs.io/en/latest/
