@@ -10,3 +10,5 @@ Spec-Synthase is a tool to help deal with big swagger files, by building the swa
 # Usage examples with Zalando/Connexion in production:
 [Mozilla/Balrog - Admin Api](https://github.com/mozilla/balrog/blob/c6ac05dc2f4245f33628c1c2cb4b5c5de02c21f5/auslib/web/admin/base.py#L20-L30)  
 [Mozilla/Balrog - Public Api](https://github.com/mozilla/balrog/blob/c6ac05dc2f4245f33628c1c2cb4b5c5de02c21f5/auslib/web/public/base.py#L30-L37)  
+[National Library of Finland/Finto-suggestions
+](https://github.com/NatLibFi/Finto-suggestions/blob/master/api/app.py#L89)
