@@ -28,7 +28,7 @@ def get_requirements(req_file):
 
 setup(
     name='spec-synthase',
-    version='0.1.9',
+    version='0.1.10',
     license='MPL2',
     description='spec-synthase is a tool to help deal with big swagger files, by building the swagger specification files from little spec files. ',
     long_description=read('README.rst'),
