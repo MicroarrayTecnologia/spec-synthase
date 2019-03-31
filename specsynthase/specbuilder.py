@@ -10,7 +10,7 @@ class SpecBuilder(OrderedDict):
 
     def _load_spec(self, file_name):
         with open(file_name, 'r') as spec_file:
-            return yaml.load(spec_file)
+            return yaml.load(spec_file, Loader=yaml.FullLoader)
 
     def _merge_part(self, key, part_dict):
         if part_dict:
