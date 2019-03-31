@@ -19,7 +19,9 @@ def _check_dicts(l, r):
 
 def test_build_fluent():
     base_dir = _get_base_dir()
-    full = yaml.load(open(path.join(base_dir, "full.yml")).read())
+    full = yaml.load(
+        open(path.join(base_dir, "full.yml")).read(),
+        Loader=yaml.FullLoader)
     spec = SpecBuilder().add_spec(path.join(base_dir, "security.yml"))\
                         .add_spec(path.join(base_dir, "base.yml"))\
                         .add_spec(path.join(base_dir, "definitions.yml"))\
@@ -39,7 +41,9 @@ def test_build_existing_key():
 def test_dump():
     base_dir = _get_base_dir()
     parts = ["base.yml", "definitions.yml", "paths.yml", "security.yml"]
-    full = yaml.load(open(path.join(base_dir, "full.yml")).read())
+    full = yaml.load(
+        open(path.join(base_dir, "full.yml")).read(),
+        Loader=yaml.FullLoader)
 
     spec = SpecBuilder()
     for p in parts:
@@ -47,7 +51,7 @@ def test_dump():
 
     # Dumping and reloading the yaml is slow, but we can't compare dumped
     # strings because of potential key ordering differences.
-    assert full == yaml.load(spec.dump())
+    assert full == yaml.load(spec.dump(), Loader=yaml.FullLoader)
 
 
 def test_validation_fail():
