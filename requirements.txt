@@ -1,2 +1,2 @@
 pyyaml
-swagger-spec-validator
+swagger-spec-validator==3.0.3
